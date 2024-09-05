@@ -1,0 +1,17 @@
+{
+  
+  "name": "logica-programacion-1",
+  "version": "1.0.0",
+  "description": "Programa para comparar tres numeros, numero mayor, numero menor y numero del medio. O si hay dos o tres numeros iguales.",
+  "main": "index.js",
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "prompt-sync": "^4.2.0"
+  }
+}
