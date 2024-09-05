@@ -3,7 +3,7 @@
 
 const prompt = require('prompt-sync')();
 
-
+//funcion para ordenar un arreglo de 3 numeros
 function orden_numerico(numbers) {
     let numero_mayor = Math.max(...numbers)
     let numero_menor = Math.min(...numbers)
@@ -16,6 +16,7 @@ function orden_numerico(numbers) {
     return [numero_mayor,numero_medio,numero_menor];
 }
 
+//Funcion para verificar cuantas veces se repite un numero en un arreglo de 3 enteros
 function numeros_iguales (numbers){
     let numero_igual = 0
     let cantidad_de_repeticion = 2
@@ -33,15 +34,15 @@ function numeros_iguales (numbers){
 }
 
 
-
-// Pedir numeros al usuario
+// Pedir numeros al usuario, mandando mensaje de error si no ingresa un entero
 let numeros_ingresados = [0,0,0]
 let numerosLetras = ["primer","segundo","tercer"]
 
+console.log("Bienvenido usuario al programa para ordenarte tres numeros enteros")
 for (let i=0;i<numeros_ingresados.length;i++){
     do{
-        numeros_ingresados[i]=parseInt(prompt(`Ingrese el ${numerosLetras[i]} numero  :  `))
-        if(!Number.isInteger(numeros_ingresados[i])){ console.log("Porfavor ingrese un numero entero")}    
+        numeros_ingresados[i]=parseInt(prompt(`Ingrese el ${numerosLetras[i]} numero entero  :  `))
+        if(!Number.isInteger(numeros_ingresados[i])){ console.log("¡Error! Porfavor ingrese un numero entero")}    
     }while(!Number.isInteger(numeros_ingresados[i]))
 
 }
@@ -49,7 +50,7 @@ for (let i=0;i<numeros_ingresados.length;i++){
 // mostrar numeros ingresados por el usuario
 console.log(`\nLos numeros ingresados son los siguientes :  ${numeros_ingresados}`)
 
-// Se resive de la funcion dos enteros en donde:
+// Se recibe de la funcion dos enteros en donde:
 // igualdad[0] es la cantidad de veces que se repite el numero y
 // igualdad[1] es el numero que se repite 
 let igualdad = numeros_iguales(numeros_ingresados)
